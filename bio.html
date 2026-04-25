@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio | Flamarion | Saúde Digital</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #020617;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .glow-text {
+      text-shadow: 0 0 8px rgba(34,211,238,.7), 0 0 20px rgba(34,211,238,.5);
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      transition: .3s;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar { display:none; }
+    .hide-scrollbar { scrollbar-width:none; }
+
+    /* Timeline */
+    .timeline-wrapper { position: relative; }
+    .timeline-line {
+      position:absolute;
+      top:50%;
+      left:0;
+      width:100%;
+      height:4px;
+      transform:translateY(-50%);
+      background:linear-gradient(90deg,#06b6d4,#22c55e,#06b6d4);
+      box-shadow:0 0 15px rgba(34,211,238,.5);
+      z-index:0;
+    }
+
+    .timeline-item {
+      min-width:260px;
+      z-index:1;
+      transition:.3s;
+    }
+
+    .timeline-item.active .glass{
+      border:1px solid rgba(250,204,21,.7);
+      box-shadow:0 0 25px rgba(250,204,21,.35);
+      transform:scale(1.05);
+    }
+
+    .timeline-item.active h3{
+      color:#fde047 !important;
+      text-shadow:0 0 10px rgba(250,204,21,.8);
+    }
+
+    .timeline-item.active .marker{
+      width:28px;
+      height:28px;
+      background:#facc15;
+      box-shadow:0 0 20px #facc15;
+    }
+
+    .marker {
+      width:18px;
+      height:18px;
+      border-radius:50%;
+      background:#22d3ee;
+      margin:auto;
+      box-shadow:0 0 15px #22d3ee;
+      animation:pulse 2s infinite;
+      transition:.3s;
+    }
+
+    @keyframes pulse {
+      0%,100%{transform:scale(1);}
+      50%{transform:scale(1.25);}
+    }
+
+    /* Cards Netflix */
+    .card {
+      min-width:280px;
+      border-radius:20px;
+      overflow:hidden;
+      transition:.3s;
+      background:rgba(255,255,255,.05);
+      position:relative;
+    }
+
+    .card:hover {
+      transform:scale(1.08);
+      box-shadow:0 0 30px rgba(34,211,238,.35);
+      z-index:10;
+    }
+
+    .card img {
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+
+    .nav-btn {
+      padding:8px 14px;
+      border-radius:10px;
+      border:1px solid #22d3ee;
+      background:rgba(15,23,42,.9);
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full bg-slate-950/80 backdrop-blur z-50 border-b border-slate-800">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="text-2xl font-bold text-cyan-300">Flamarion | Saúde Digital</h1>
+    <div class="flex gap-6 text-slate-300">
+      <a href="index.html" class="hover:text-cyan-300 hover:bg-cyan-500/10 px-3 py-2 rounded-lg transition">Início</a>
+      <a href="index.html#projetos" class="hover:text-cyan-300 hover:bg-cyan-500/10 px-3 py-2 rounded-lg transition">Projetos</a>
+      <a href="index.html#artigos" class="hover:text-cyan-300 hover:bg-cyan-500/10 px-3 py-2 rounded-lg transition">Artigos</a>
+         <a href="index.html#bio" class="hover:text-cyan-300 hover:bg-cyan-500/10 px-3 py-2 rounded-lg transition">Biografia</a>
+    </div>
+  </div>  
+</nav>
+
+<!-- HERO -->
+<header id="inicio" class="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden">
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+    <source src="video/vid01.mp4" type="video/mp4">
+  </video>
+
+  <div class="absolute inset-0 bg-slate-950/75"></div>
+
+  <div class="relative z-10">
+    <!--<h1 class="text-6xl md:text-8xl font-black glow-text">Flamarion Silva dos Anjos</h1>-->
+    <h1 class="text-cyan-300 text-8xl font-black glow-text">Minha Biografia</h1>
+    <p class="text-justify max-w-2xl mx-auto text-slate-300 mt-6 text-lg glow-text">
+        Profissional com 50 anos de idade, na área da saúde com mais de 29 anos de experiência em ambiente hospitalar, mais de 18 anos como técnico em enfermagem, atuando em diferentes áreas assistenciais, administrativas e operacionais dentro de um hospital. Ao longo dessa trajetória desenvolvi profundo conhecimento sobre fluxos assistenciais, processos hospitalares, prontuários clínicos, gestão de medicamentos e integração entre setores hospitalares.
+Atuo como Técnico de Enfermagem em unidade hospitalar com atendimento a pacientes cirúrgicos e ja atuei no atendimento de pacientes clínicos e semi-intensivos, 
+Minha experiência também inclui atuação em farmácia hospitalar e apoio ao centro cirúrgico, realizando controle e distribuição de medicamentos, organização de insumos e montagem de kits cirúrgicos utilizados em procedimentos hospitalares. Além disso, possuo experiência na área administrativa hospitalar, com atuação em arquivo médico e estatística, trabalhando diretamente com prontuários, autorizações de atendimento e organização de dados clínicos.
+Atualmente curso Ciência da Computação, direcionando minha formação para tecnologia aplicada à saúde e sistemas hospitalares
+
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4 justify-center">
+      
+      <a href="https://linkedin.com/" target="_blank"
+         class="border border-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-6 py-3 rounded-2xl transition">
+        LinkedIn
+      </a>
+
+      <a href="cv.pdf" target="_blank"
+         class="bg-cyan-400 hover:bg-cyan-00 text-slate-900 font-semibold px-6 py-3 rounded-2xl transition">
+        Baixar CV
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- TIMELINE -->
+<section id="timelineSection" class="py-24 px-6 max-w-7xl mx-auto">
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-4xl font-bold glow-text">Linha do Tempo</h2>
+    <div class="flex gap-2">
+      <button id="timelineLeft" class="nav-btn">←</button>
+      <button id="timelineRight" class="nav-btn">→</button>
+    </div>
+  </div>
+
+  <div class="timeline-wrapper">
+    <div class="timeline-line"></div>
+
+    <div id="timeline" class="flex gap-8 overflow-x-auto hide-scrollbar py-10 relative">
+      <div class="timeline-item text-center">
+        <div class="glass p-6 rounded-3xl mb-4">
+          <h3 class="text-cyan-300 text-2xl font-bold">2018</h3>
+          <p class="text-slate-300 mt-2">Início na enfermagem</p>
+        </div>
+        <div class="marker"></div>
+      </div>
+
+      <div class="timeline-item text-center">
+        <div class="glass p-6 rounded-3xl mb-4">
+          <h3 class="text-emerald-300 text-2xl font-bold">2022</h3>
+          <p class="text-slate-300 mt-2">Business Intelligence</p>
+        </div>
+        <div class="marker"></div>
+      </div>
+
+      <div class="timeline-item text-center">
+        <div class="glass p-6 rounded-3xl mb-4">
+          <h3 class="text-yellow-300 text-2xl font-bold">2026 • Atual</h3>
+          <p class="text-slate-300 mt-2">Portfólio em Saúde Digital</p>
+        </div>
+        <div class="marker"></div>
+      </div>
+
+      <div class="timeline-item text-center">
+        <div class="glass p-6 rounded-3xl mb-4">
+          <h3 class="text-cyan-300 text-2xl font-bold">Futuro</h3>
+          <p class="text-slate-300 mt-2">IA e automação em saúde</p>
+        </div>
+        <div class="marker"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetosSection" class="py-24 px-6 max-w-7xl mx-auto">
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-4xl font-bold glow-text">Projetos</h2>
+    <div class="flex gap-2">
+      <button id="projLeft" class="nav-btn">←</button>
+      <button id="projRight" class="nav-btn">→</button>
+    </div>
+  </div>
+
+  <div id="projectsRow" class="flex gap-6 overflow-x-auto hide-scrollbar py-8">
+
+    <div class="card group">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Dashboard Hospitalar</h3>
+        <p class="text-slate-400 text-sm mt-2">BI aplicado à gestão.</p>
+      </div>
+      <div class="absolute inset-0 bg-slate-950/95 opacity-0 group-hover:opacity-100 transition p-6 flex flex-col justify-end">
+        <h3 class="text-2xl font-bold text-cyan-300">Dashboard Hospitalar</h3>
+        <p class="text-sm text-slate-300 mt-3">Indicadores clínicos e operacionais.</p>
+        <a href="proj001.html" class="mt-4 bg-cyan-400 text-slate-900 px-4 py-2 rounded-xl font-semibold w-fit">Ver projeto</a>
+      </div>
+    </div>
+
+    <div class="card group">
+      <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Sistema Assistencial</h3>
+        <p class="text-slate-400 text-sm mt-2">Fluxo assistencial digital.</p>
+      </div>
+      <div class="absolute inset-0 bg-slate-950/95 opacity-0 group-hover:opacity-100 transition p-6 flex flex-col justify-end">
+        <h3 class="text-2xl font-bold text-cyan-300">Sistema Assistencial</h3>
+        <p class="text-sm text-slate-300 mt-3">Produtividade e gestão clínica.</p>
+        <a href="proj002.html" class="mt-4 bg-cyan-400 text-slate-900 px-4 py-2 rounded-xl font-semibold w-fit">Ver projeto</a>
+      </div>
+    </div>
+
+    <div class="card group">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+      <div class="p-4">
+        <h3 class="text-xl font-bold">Carreira Digital</h3>
+        <p class="text-slate-400 text-sm mt-2">Educação e inovação.</p>
+      </div>
+      <div class="absolute inset-0 bg-slate-950/95 opacity-0 group-hover:opacity-100 transition p-6 flex flex-col justify-end">
+        <h3 class="text-2xl font-bold text-cyan-300">Carreira Digital</h3>
+        <p class="text-sm text-slate-300 mt-3">Transição para Saúde Digital.</p>
+        <a href="proj003.html" class="mt-4 bg-cyan-400 text-slate-900 px-4 py-2 rounded-xl font-semibold w-fit">Ver projeto</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center text-slate-500 border-t border-slate-800">
+    © 2026  Flamarion | Saúde Digital | Contato: flamarion.contato@gmail.com
+  </footer>
+
+<script>
+  // Timeline
+  const timeline = document.getElementById('timeline');
+  document.getElementById('timelineLeft').onclick = () => timeline.scrollLeft -= 300;
+  document.getElementById('timelineRight').onclick = () => timeline.scrollLeft += 300;
+
+  let timelinePlay = setInterval(scrollTimeline, 30);
+
+  function scrollTimeline(){
+    timeline.scrollLeft += 1;
+    if(timeline.scrollLeft >= timeline.scrollWidth - timeline.clientWidth){
+      timeline.scrollLeft = 0;
+    }
+    highlightCenterCard();
+  }
+
+  timeline.addEventListener("mouseenter", ()=> clearInterval(timelinePlay));
+  timeline.addEventListener("mouseleave", ()=> {
+    timelinePlay = setInterval(scrollTimeline,30);
+  });
+
+  function highlightCenterCard(){
+    const cards = document.querySelectorAll('.timeline-item');
+    const center = timeline.scrollLeft + timeline.clientWidth / 2;
+
+    cards.forEach(card=>{
+      const cardCenter = card.offsetLeft + card.clientWidth / 2;
+      const distance = Math.abs(center - cardCenter);
+
+      if(distance < 180){
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+  }
+
+  highlightCenterCard();
+
+  // Projetos
+  const projectsRow = document.getElementById('projectsRow');
+  document.getElementById('projLeft').onclick = () => projectsRow.scrollLeft -= 300;
+  document.getElementById('projRight').onclick = () => projectsRow.scrollLeft += 300;
+
+  let autoPlay = setInterval(scrollProjects, 20);
+
+  function scrollProjects(){
+    projectsRow.scrollLeft += 1;
+    if(projectsRow.scrollLeft >= projectsRow.scrollWidth - projectsRow.clientWidth){
+      projectsRow.scrollLeft = 0;
+    }
+  }
+
+  projectsRow.addEventListener("mouseenter", ()=> clearInterval(autoPlay));
+  projectsRow.addEventListener("mouseleave", ()=> {
+    autoPlay = setInterval(scrollProjects,20);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artigo | Flamarion | Saúde Digital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+   .parallax-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d"); /*url("img/foto.jpg")*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  filter: brightness(0.3);
+  z-index: 0;
+}
+
+/* overlay extra para melhorar contraste */
+.parallax-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0);
+}
+
+/* mobile fix (parallax não funciona bem em celular) */
+@media (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+}
+    body { font-family: 'Inter', sans-serif; background:#020617; color:white; }
+    .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(12px); }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full bg-slate-950/80 backdrop-blur z-50 border-b border-slate-800">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="text-2xl font-bold text-cyan-300">Flamarion | Saúde Digital</h1>
+    <div class="flex gap-6 text-slate-300">
+      <a href="index.html" class="hover:text-cyan-300 hover:bg-cyan-500/10 px-3 py-2 rounded-lg transition">Início</a>
+      <a href="index.html#projetos" class="hover:text-cyan-300 hover:bg-cyan-500/10 px-3 py-2 rounded-lg transition">Projetos</a>
+      <a href="index.html#artigos" class="hover:text-cyan-300 hover:bg-cyan-500/10 px-3 py-2 rounded-lg transition">Artigos</a>
+      <a href="bio.html" class="hover:text-cyan-300 hover:bg-cyan-500/10 px-3 py-2 rounded-lg transition">Biografia</a>
+    </div>
+  </div>  
+</nav>
+
+<!--Artigo-->
+ <section class="py-24 px-6 max-w-4xl mx-auto">
+  <!-- FUNDO PARALLAX -->
+  <div class="parallax-bg"></div>
+  <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d" 
+       class="w-full h-80 object-cover rounded-3xl"> <!--src="img/foto.jpg"*/-->
+  <div class="relative max-w-4xl w-full z-10">
+    <p class="text-cyan-300 text-sm mt-8">Saúde Digital • Business Intelligence </p>
+    <h1 class="text-5xl font-black mt-4">Dimensionamento de Equipe de Enfermagem</h1>
+
+  <!--Resumo-->
+    <div class="glass rounded-3xl p-8 mt-2">
+      <h2 class="text-2xl font-bold mb-4">Sumário</h2>
+      <ul class="space-y-2 text-slate-300">
+        <li><a href="#resu">Resumo</a></li>
+        <li><a href="#intro">Introdução</a></li>
+        <li><a href="#metodo">Metodologia</a></li>
+        <li><a href="#fim">Conclusões</a></li>
+        <li><a href="#refe">Referências</a></li>
+      </ul>
+    </div>
+  
+    <!--Conteudo-->
+
+   <article class="mt-20 text-slate-300 leading-relaxed">
+
+    <section class="mb-10">
+     <h2 id="resu" class="scroll-mt-32 text-3xl font-bold text-white mb-4 ml-0 pl-0">
+       Resumo
+     </h2>
+     <p class="ml-0 pl-0">
+      O dimensionamento de equipes impacta diretamente a qualidade assistencial.
+     </p>
+   </section>
+
+    <section class="mb-10">
+    <h2 id="intro" class="scroll-mt-32 text-3xl font-bold text-white mb-4 ml-0 pl-0">
+      Introdução
+    </h2>
+    <p class="ml-0 pl-0">
+      O dimensionamento de equipes impacta diretamente a qualidade assistencial.
+    </p>
+  </section>
+
+  <section class="mb-10">
+    <h2 id="metodo" class="scroll-mt-32 text-3xl font-bold text-white mb-4 ml-0 pl-0">
+      Metodologia
+    </h2>
+    <p class="ml-0 pl-0">
+      Um texto sobre a metodologia.
+    </p>
+
+    <h3 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2 ml-0 pl-0">
+      Coleta de Dados
+    </h3>
+     <!--Citação-->
+      <blockquote class="border-l-4 border-cyan-400 pl-6 italic text-slate-400 mt-6">
+            “Dados clínicos transformados em inteligência apoiam uma gestão mais segura.”
+          </blockquote>
+      <!-- IMAGEM -->
+      <figure class="my-8">
+      <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d" class="w-full rounded-2xl">
+        <figcaption class="text-center text-sm text-slate-400 mt-2">
+         Figura 2 — Fluxo do processo de análise.
+         </figcaption>
+      </figure>
+
+    <p class="ml-0 pl-0">
+      Utilizando escalas e dados clínicos é possível otimizar decisões.
+    </p>
+
+    <h3 class="text-2xl font-semibold text-cyan-300 mt-6 mb-2 ml-0 pl-0">
+      Análise e Processamento
+    </h3>
+    <p class="ml-0 pl-0">
+      Os dados foram processados e analisados para gerar indicadores.
+    </p>
+  </section>
+
+  <section class="mb-10">
+    <h2 id="fim" class="scroll-mt-32 text-3xl font-bold text-white mb-4 ml-0 pl-0">
+      Conclusões
+    </h2>
+    <p class="ml-0 pl-0">
+      A tecnologia permite uma gestão mais eficiente e segura.
+    </p>
+  </section>
+
+  <section class="mb-10">
+    <h2 id="refe" class="scroll-mt-32 text-3xl font-bold text-white mb-4 ml-0 pl-0">
+      Referências
+    </h2>
+        <ol class="list-decimal list-inside space-y-4 text-slate-300">
+    <li id="ref1">
+      CONSELHO FEDERAL DE ENFERMAGEM (COFEN). 
+      Resolução nº 543/2017. 
+      Disponível em:
+      <a href="https://www.cofen.gov.br/resolucao-cofen-5432017/" 
+         class="text-cyan-300 hover:underline" target="_blank">
+         www.cofen.gov.br
+      </a>.
+      Acesso em: 22 abr. 2026.
+    </li>
+
+    <li id="ref2">
+      BRADEN, B.; BERGSTROM, N. 
+      Braden Scale for Predicting Pressure Sore Risk. 1987.
+    </li>
+
+    <li id="ref3">
+      MORSE, J. M. 
+      Morse Fall Scale. Journal of Nursing Administration, 1989.
+    </li>
+  </ol>
+  </section>
+
+</article>
+      <!-- CTA -->
+      <div class="glass rounded-3xl p-8 mt-16 text-center">
+        <h3 class="text-2xl font-bold text-white">Gostou deste conteúdo?</h3>
+        <p class="text-slate-400 mt-2">
+          Explore mais artigos e projetos sobre Saúde Digital e Business Intelligence.
+        </p>
+        <a href="index.html#artigos"
+           class="inline-block mt-6 bg-cyan-400 hover:bg-cyan-300 text-slate-900 font-semibold px-6 py-3 rounded-xl transition">
+          Ver mais artigos
+        </a>
+      </div>
+
+    </div>
+ </section>
+
+  <footer class="py-10 text-center text-slate-500 border-t border-slate-800">
+    © 2026  Flamarion | Saúde Digital | Contato: flamarion.contato@gmail.com
+  </footer>
+  </body>
+</html>

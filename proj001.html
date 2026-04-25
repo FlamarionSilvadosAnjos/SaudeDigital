@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto | Flamarion | Saúde Digital</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+  
+    body { font-family: 'Inter', sans-serif; background:#020617; color:white; }
+    .glass { background: rgba(2, 6, 23, 0.034); backdrop-filter: blur(12px); }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full bg-slate-950/80 backdrop-blur z-50 border-b border-slate-800">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="text-2xl font-bold text-cyan-300">Flamarion | Saúde Digital</h1>
+    <div class="flex gap-6 text-slate-300">
+      <a href="index.html" class="hover:text-cyan-300 hover:bg-cyan-500/10 px-3 py-2 rounded-lg transition">Início</a>
+      <a href="index.html#projetos" class="hover:text-cyan-300 hover:bg-cyan-500/10 px-3 py-2 rounded-lg transition">Projetos</a>
+      <a href="index.html#artigos" class="hover:text-cyan-300 hover:bg-cyan-500/10 px-3 py-2 rounded-lg transition">Artigos</a>
+      <a href="bio.html" class="hover:text-cyan-300 hover:bg-cyan-500/10 px-3 py-2 rounded-lg transition">Biografia</a>    
+    </div>
+  </div>
+</nav>
+<!-- HERO COM VÍDEO -->
+<section class="relative h-screen overflow-hidden flex items-center justify-center">
+
+  <!-- VÍDEO -->
+  <video autoplay muted loop playsinline
+         class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="video/vid01.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
+  </video>
+
+  <!-- OVERLAY -->
+  <div class="absolute inset-0 bg-slate-950/70 z-0"></div>
+
+  <!-- CONTEÚDO HERO -->
+  <div class="relative max-w-4xl w-full z-10">
+    <p class="text-emerald-300 text-sm">Projeto • Business Intelligence</p>
+
+    <h1 class="text-5xl md:text-7xl font-black mt-4">
+      Dashboard Hospitalar
+    </h1>
+
+    <p class="text-slate-300 mt-4 text-xl">
+      Indicadores clínicos e operacionais em tempo real.
+    </p>
+    <!-- RESUMO -->
+  <div class="glass rounded-3xl p-8 mt-10">
+    <h2 class="text-2xl font-bold mb-4">Visão Geral</h2>
+    <ul class="space-y-2 text-slate-300">
+      <li><a href="#objetivo">Objetivo</a></li>
+      <li><a href="#tecnologias">Tecnologias</a></li>
+      <li><a href="#funcionalidades">Funcionalidades</a></li>
+      <li><a href="#resultados">Resultados</a></li>
+    </ul>
+  </div>
+  </div>
+
+</section>
+
+<!-- CONTEÚDO DO PROJETO -->
+<section class="py-24 px-6 max-w-4xl mx-auto">
+
+  <!-- CONTEÚDO -->
+  <article class="mt-16 space-y-8 text-slate-300">
+
+     <section id="objetivo" class="scroll-mt-32">
+    <h2 class="text-3xl font-bold text-white">Objetivo</h2>
+    <p>
+        Este projeto foi desenvolvido para centralizar dados hospitalares,
+        permitindo análise rápida de indicadores assistenciais e operacionais.
+      </p>
+    </section>
+
+    <section id="tecnologias" class="scroll-mt-32">
+    <h2 class="text-3xl font-bold text-white">Tecnologias</h2>
+      <div class="flex flex-wrap gap-3 mt-4">
+        <span class="bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-xl">HTML</span>
+        <span class="bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-xl">Tailwind CSS</span>
+        <span class="bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-xl">JavaScript</span>
+        <span class="bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-xl">Power BI</span>
+      </div>
+    </section>
+
+    <section id="funcionalidades" class="scroll-mt-32">
+    <h2 class="text-3xl font-bold text-white">Funcionalidades</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Indicadores em tempo real</li>
+        <li>Filtros por setor</li>
+        <li>Gráficos interativos</li>
+        <li>Relatórios exportáveis</li>
+      </ul>
+    </section>
+
+    <section id="resultados" class="scroll-mt-32">
+    <h2 class="text-3xl font-bold text-white">Resultados</h2>
+      <p>
+        A ferramenta permitiu melhor acompanhamento de métricas hospitalares,
+        apoiando decisões rápidas e baseadas em dados.
+      </p>
+    </section>
+
+  </article>
+
+  <!-- BOTÕES -->
+  <div class="mt-12 flex gap-4 flex-wrap">
+    <a href="#" class="border border-cyan-500 hover:bg-cyan-400 px-6 py-3 rounded-2xl font-semibold transition">
+      Veja Minha Solução
+    </a>
+
+    <a href="#" class="border border-cyan-500 hover:bg-cyan-400 px-6 py-3 rounded-2xl transition">
+      Código Fonte
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <div class="glass rounded-3xl p-8 mt-16 text-center">
+    <h3 class="text-2xl font-bold text-white">Gostou deste conteúdo?</h3>
+    <p class="text-slate-400 mt-2">
+      Explore mais artigos e projetos sobre Saúde Digital e Business Intelligence.
+    </p>
+    <a href="index.html#projetos"
+       class="inline-block mt-6 bg-cyan-400 hover:bg-cyan-300 text-slate-900 font-semibold px-6 py-3 rounded-xl transition">
+      Ver mais projetos
+    </a>
+  </div>
+
+</section>
+<!-- FOOTER -->
+<footer class="py-10 text-center text-slate-500 border-t border-slate-800">
+  © 2026 Flamarion | Saúde Digital | Contato: flamarion.contato@gmail.com
+</footer>
+
+</body>
+</html>

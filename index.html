@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Flamarion | Saúde Digital - Projetos, artigos e inovação em saúde digital.">
+<title>Flamarion | Saúde Digital</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+body{
+  font-family:'Inter',sans-serif;
+  scroll-behavior:smooth;
+  background:#020617;
+  color:white;
+  overflow-x:hidden;
+}
+
+.glow-text{
+  text-shadow:0 0 8px rgba(34,211,238,.7),0 0 20px rgba(34,211,238,.5);
+}
+
+.hide-scrollbar::-webkit-scrollbar{display:none;}
+.hide-scrollbar{scrollbar-width:none;}
+
+.card{
+  min-width:280px;
+  border-radius:20px;
+  overflow:hidden;
+  transition:.3s;
+  background:rgba(255,255,255,.05);
+  position:relative;
+  flex-shrink:0;
+}
+
+.card:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 30px rgba(34,211,238,.35);
+  z-index:10;
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.nav-btn{
+  padding:8px 14px;
+  border-radius:10px;
+  border:1px solid #22d3ee;
+  background:rgba(15,23,42,.9);
+  cursor:pointer;
+  transition:.3s;
+}
+
+.nav-btn:hover{
+  background:#22d3ee;
+  color:#020617;
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+
+<video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+  <source src="video/vid01.mp4" type="video/mp4">
+</video>
+
+<div class="absolute top-0 left-0 w-full h-full bg-slate-950/70"></div>
+
+<img src="img/Coru_Az.png"
+alt="Logo Coruja"
+class="w-20 md:w-28 h-auto mb-6 relative z-10 drop-shadow-2xl"/>
+
+<span class="px-4 py-2 rounded-full bg-white/10 backdrop-blur text-cyan-300 text-sm relative z-10">
+Saúde Digital • Inovação • IA
+</span>
+
+<h1 class="text-6xl md:text-8xl font-black mt-6 relative z-10 glow-text">
+Saúde Digital
+</h1>
+
+<p class="mt-6 max-w-2xl text-slate-200 text-xl relative z-10 text-justify">
+Projetos, artigos e inovação em saúde digital.
+</p>
+
+<span class="px-4 py-2 rounded-full bg-white/10 backdrop-blur text-orange-300 text-sm relative z-10 mt-4">
+por Flamarion Silva dos Anjos
+</span>
+
+<div class="mt-8 flex gap-4 flex-wrap justify-center relative z-10">
+<a href="#projetos" class="border border-cyan-500 hover:bg-cyan-400 px-6 py-3 rounded-2xl font-semibold transition">Projetos</a>
+<a href="#artigos" class="border border-cyan-500 hover:bg-cyan-400 px-6 py-3 rounded-2xl font-semibold transition">Artigos</a>
+<a href="bio.html" class="border border-cyan-500 hover:bg-cyan-400 px-6 py-3 rounded-2xl font-semibold transition">Biografia</a>
+</div>
+</header>
+
+<!-- PROJETOS -->
+<section id="projetos" class="py-24 px-6 max-w-7xl mx-auto">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-4xl font-bold glow-text">Projetos</h2>
+<div class="flex gap-2">
+<button id="projLeft" class="nav-btn">←</button>
+<button id="projRight" class="nav-btn">→</button>
+</div>
+</div>
+
+<div id="projectsRow" class="flex gap-6 overflow-x-auto hide-scrollbar py-8">
+
+<div class="card group">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+<div class="p-4">
+<h3 class="text-xl font-bold">Dashboard Hospitalar</h3>
+<p class="text-slate-400 text-sm mt-2">BI aplicado à gestão.</p>
+</div>
+<div class="absolute inset-0 bg-slate-950/95 opacity-0 group-hover:opacity-100 transition p-6 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-cyan-300">Dashboard Hospitalar</h3>
+<p class="text-sm text-slate-300 mt-3">Indicadores clínicos e operacionais.</p>
+<a href="proj001.html" class="mt-4 bg-cyan-400 text-slate-900 px-4 py-2 rounded-xl font-semibold w-fit">Ver projeto</a>
+</div>
+</div>
+
+<div class="card group">
+<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef">
+<div class="p-4">
+<h3 class="text-xl font-bold">Sistema Assistencial</h3>
+<p class="text-slate-400 text-sm mt-2">Fluxo assistencial digital.</p>
+</div>
+<div class="absolute inset-0 bg-slate-950/95 opacity-0 group-hover:opacity-100 transition p-6 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-cyan-300">Sistema Assistencial</h3>
+<p class="text-sm text-slate-300 mt-3">Produtividade e gestão clínica.</p>
+<a href="proj002.html" class="mt-4 bg-cyan-400 text-slate-900 px-4 py-2 rounded-xl font-semibold w-fit">Ver projeto</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ARTIGOS -->
+<section id="artigos" class="py-24 px-6 bg-slate-900">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+<h2 class="text-4xl font-bold glow-text">Artigos</h2>
+
+<div class="flex gap-2">
+<button id="artLeft" class="nav-btn">←</button>
+<button id="artRight" class="nav-btn">→</button>
+</div>
+
+<input type="text" id="searchInput" placeholder="Buscar artigo..."
+class="px-4 py-3 rounded-xl bg-slate-800 text-white w-full md:w-80">
+</div>
+
+<div id="articleGrid" class="flex gap-6 overflow-x-auto hide-scrollbar py-8">
+
+<a href="art001.html" class="card article-card group relative">
+<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d">
+<div class="p-4">
+<span class="text-cyan-300 text-sm">Saúde Digital</span>
+<h3 class="text-xl font-bold mt-2">Dimensionamento de Enfermagem</h3>
+</div>
+<div class="absolute inset-0 bg-slate-950/95 opacity-0 group-hover:opacity-100 transition p-6 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-cyan-300">Dimensionamento</h3>
+<p class="text-sm text-slate-300 mt-3">Gestão assistencial baseada em dados.</p>
+<span class="mt-4 bg-cyan-400 text-slate-900 px-4 py-2 rounded-xl font-semibold w-fit">Ler artigo</span>
+</div>
+</a>
+
+<a href="art002.html" class="card article-card group relative">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+<div class="p-4">
+<span class="text-purple-300 text-sm">Carreira</span>
+<h3 class="text-xl font-bold mt-2">Carreira em Saúde Digital</h3>
+</div>
+<div class="absolute inset-0 bg-slate-950/95 opacity-0 group-hover:opacity-100 transition p-6 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-purple-300">Carreira Digital</h3>
+<p class="text-sm text-slate-300 mt-3">Caminhos e oportunidades.</p>
+<span class="mt-4 bg-cyan-400 text-slate-900 px-4 py-2 rounded-xl font-semibold w-fit">Ler artigo</span>
+</div>
+</a>
+
+<a href="art003.html" class="card article-card group relative">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+<div class="p-4">
+<span class="text-green-300 text-sm">Inovação</span>
+<h3 class="text-xl font-bold mt-2">Inovação em Saúde Digital</h3>
+</div>
+<div class="absolute inset-0 bg-slate-950/95 opacity-0 group-hover:opacity-100 transition p-6 flex flex-col justify-end">
+<h3 class="text-2xl font-bold text-green-300">Inovação</h3>
+<p class="text-sm text-slate-300 mt-3">Tecnologia, IA e automação.</p>
+<span class="mt-4 bg-cyan-400 text-slate-900 px-4 py-2 rounded-xl font-semibold w-fit">Ler artigo</span>
+</div>
+</a>
+
+</div>
+</div>
+</section>
+
+<footer class="py-10 text-center text-slate-500 border-t border-slate-800">
+© 2026 | Saúde Digital | Contato: flamarion.contato@gmail.com
+</footer>
+
+<script>
+// PROJETOS
+const projectsRow=document.getElementById('projectsRow');
+document.getElementById('projLeft').onclick=()=>projectsRow.scrollLeft-=300;
+document.getElementById('projRight').onclick=()=>projectsRow.scrollLeft+=300;
+
+let autoPlayProjects=setInterval(scrollProjects,20);
+function scrollProjects(){
+projectsRow.scrollLeft+=1;
+if(projectsRow.scrollLeft>=projectsRow.scrollWidth-projectsRow.clientWidth){
+projectsRow.scrollLeft=0;
+}
+}
+projectsRow.addEventListener("mouseenter",()=>clearInterval(autoPlayProjects));
+projectsRow.addEventListener("mouseleave",()=>{autoPlayProjects=setInterval(scrollProjects,20);});
+
+// ARTIGOS
+const articleGrid=document.getElementById('articleGrid');
+document.getElementById('artLeft').onclick=()=>articleGrid.scrollLeft-=300;
+document.getElementById('artRight').onclick=()=>articleGrid.scrollLeft+=300;
+
+let autoPlayArticles=setInterval(scrollArticles,20);
+function scrollArticles(){
+articleGrid.scrollLeft+=1;
+if(articleGrid.scrollLeft>=articleGrid.scrollWidth-articleGrid.clientWidth){
+articleGrid.scrollLeft=0;
+}
+}
+articleGrid.addEventListener("mouseenter",()=>clearInterval(autoPlayArticles));
+articleGrid.addEventListener("mouseleave",()=>{autoPlayArticles=setInterval(scrollArticles,20);});
+
+// BUSCA
+const searchInput=document.getElementById('searchInput');
+searchInput.addEventListener('keyup',function(){
+const filter=searchInput.value.toLowerCase();
+const cards=document.querySelectorAll('.article-card');
+cards.forEach(card=>{
+const text=card.innerText.toLowerCase();
+card.style.display=text.includes(filter)?'block':'none';
+});
+});
+</script>
+
+</body>
+</html>
